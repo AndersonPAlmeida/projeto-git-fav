@@ -1,0 +1,102 @@
+* {
+   margin: 0;
+   border: 0;
+   padding: 0;
+}
+
+:root {
+   font-size: 62.5%;
+   --bg-body: #000;
+   --bg-input: #06181C;
+   --bg-button: #065E7C;
+   --bg-button-hover: #FFFFFF;
+   --bg-table: #06181C;
+   --bg-tbody: #092D38;
+   --color-tt-secondary: #065E7C;
+   --color-tt-primary: #FFFFFF;
+   --color-tt-placeholder: #7C7C8A;
+}
+body * {
+   font-size: 1.6rem;
+   color: var(--color-tt-primary);
+}
+
+body {
+   background-color: var(--bg-body);
+   padding-top: 10rem;
+}
+
+#app {
+   width: 90vw;
+   max-width: 112rem;
+   margin-inline: auto;
+}
+
+header {
+   display: flex;
+   align-items: flex-end;
+   justify-content: space-between;
+   gap: 20rem;
+   margin-bottom: 9rem;
+}
+
+.logo {
+   flex: 1;
+}
+.search {
+   flex: 2;
+   display: flex;
+   gap: .8rem
+}
+.search input {
+   padding: 1.6rem;
+   background-color: var(--bg-input);
+   border-radius: .5rem;
+   width: 100%;
+}
+.search input::placeholder {
+   color: var(--color-tt-placeholder);
+}
+.search button {
+   display: flex;
+   align-items: center;
+   padding: 1.2rem 2.2rem;
+   gap: .8rem;
+   font-size: 1.4rem;
+   border-radius: .5rem;
+   background-color: var(--bg-button);
+   font-weight: 700;
+   line-height: 2.4rem;
+   text-transform: uppercase;
+}
+.search button:hover {
+   background-color: var(--bg-button-hover);
+}
+.search button:hover *,  .search button:hover .starPath {
+   color: var(--color-tt-secondary);
+   fill: var(--color-tt-secondary);
+}
+
+table {
+   width: 100%;
+   border-radius: .5rem;
+   background-color: var(--bg-table);
+   text-align: left;
+   border-collapse: collapse;
+}
+table thead {
+   background-color: var(--bg-tbody);
+   font-size: 2rem;
+   line-height: 3rem;
+   font-weight: 700;
+   
+}
+table thead th {
+   padding: 1.6rem 4rem;
+}
+table thead th:first-child {
+   border-top-left-radius: .5rem;
+}
+table thead th:last-child {
+   border-top-right-radius: .5rem;
+}
