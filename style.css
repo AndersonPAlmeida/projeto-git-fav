@@ -154,21 +154,26 @@ tbody tr:last-child {
    border-bottom-left-radius: 1rem;
    border-bottom-right-radius: 1rem;
 }
-table {
-   height: 42rem;
-   overflow: overlay;
+table, tbody {
    display: block;
 }
-table::-webkit-scrollbar {
+table {
+   max-height: 42rem;
+   display: block;
+}
+tbody {
+   height: calc(42rem - 6.2rem);
+   overflow: overlay;
+}
+tbody::-webkit-scrollbar {
    width: .6rem;
 }
  
-table::-webkit-scrollbar-track {
+tbody::-webkit-scrollbar-track {
    background: transparent;
-   margin-top: 6rem;
 }
  
-table::-webkit-scrollbar-thumb {
+tbody::-webkit-scrollbar-thumb {
    background: #4A808C;
    border-radius: 10px;
 }
