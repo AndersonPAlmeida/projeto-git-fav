@@ -142,6 +142,7 @@ td.user span {
 }
 td .remove {
    color: var(--color-tt-button);
+   cursor: pointer;
 }
 table tr:nth-child(even) {
    background-color: var(--bg-table-two);
