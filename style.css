@@ -46,7 +46,7 @@ header {
    display: flex;
    align-items: flex-end;
    justify-content: space-between;
-   gap: 20rem;
+   gap: 10rem;
    margin-bottom: 9rem;
 }
 .logo {
