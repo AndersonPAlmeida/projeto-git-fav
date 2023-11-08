@@ -10,17 +10,27 @@
    --bg-input: #06181C;
    --bg-button: #065E7C;
    --bg-button-hover: #FFFFFF;
-   --bg-table: #06181C;
+   --bg-table: #06161B80;
+   --bg-table-two: #06181C;
    --bg-tbody: #092D38;
    --color-tt-secondary: #065E7C;
    --color-tt-primary: #FFFFFF;
    --color-tt-placeholder: #7C7C8A;
+   --color-tt-table: #E1E1E6;
+   --color-tt-button: #F75A68;
+   --color-border-table:#4A808C;
 }
 body * {
    font-size: 1.6rem;
    color: var(--color-tt-primary);
 }
-
+a {
+   text-decoration: none;
+}
+button {
+   background: none;
+   border: none;
+}
 body {
    background-color: var(--bg-body);
    padding-top: 10rem;
@@ -39,7 +49,6 @@ header {
    gap: 20rem;
    margin-bottom: 9rem;
 }
-
 .logo {
    flex: 1;
 }
@@ -79,24 +88,86 @@ header {
 
 table {
    width: 100%;
-   border-radius: .5rem;
    background-color: var(--bg-table);
    text-align: left;
    border-collapse: collapse;
+   font-size: 2rem;
+   line-height: 3rem;
+   color: var(--color-tt-table);
+   font-weight: 700;
+   border-radius: 1rem;
+   overflow: hidden;
+   border: 1px solid var(--color-border-table);
+}
+table *{
+   font-size: 1.5rem;
+   line-height: 3rem;
+   color: var(--color-tt-table);
+   font-weight: 700;
+}
+th, td {
+   padding: 1.6rem 4rem;
+   width: 100%;
+   z-index: 2;
 }
 table thead {
    background-color: var(--bg-tbody);
-   font-size: 2rem;
    line-height: 3rem;
-   font-weight: 700;
-   
+   position: sticky;
+   top: 0;
+   z-index: 2;
 }
 table thead th {
-   padding: 1.6rem 4rem;
+   font-weight: 700;
 }
 table thead th:first-child {
-   border-top-left-radius: .5rem;
+   border-top-left-radius: 1rem;
 }
 table thead th:last-child {
-   border-top-right-radius: .5rem;
+   border-top-right-radius: 1rem;
+}
+td.user {
+   display: flex;
+   gap: 1rem;
+   align-items: center;
+}
+td.user img{
+   width: 5rem;
+   height: 5rem;
+   border-radius: 50%;
+   object-fit: cover;
+}
+td.user span {
+   font-weight: 400;
+}
+td .remove {
+   color: var(--color-tt-button);
+}
+table tr:nth-child(even) {
+   background-color: var(--bg-table-two);
+   border-top: 1px solid var(--color-border-table);
+   border-bottom: 1px solid var(--color-border-table);
+
+}
+tbody tr:last-child {
+   border-bottom-left-radius: 1rem;
+   border-bottom-right-radius: 1rem;
+}
+table {
+   height: 42rem;
+   overflow: overlay;
+   display: block;
+}
+table::-webkit-scrollbar {
+   width: .6rem;
+}
+ 
+table::-webkit-scrollbar-track {
+   background: transparent;
+   margin-top: 6rem;
+}
+ 
+table::-webkit-scrollbar-thumb {
+   background: #4A808C;
+   border-radius: 10px;
 }
