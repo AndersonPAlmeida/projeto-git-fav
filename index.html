@@ -4,7 +4,10 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>GitFav</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link rel="stylesheet" href="style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
    <link rel="shortcut icon" href="./assets/starSearch.png" type="image/x-png">
 </head>
 <body>
@@ -27,145 +30,60 @@
       <section>
          <table>
             <thead>
-               <th>Usuário</th>
-               <th>Repositories</th>
-               <th>Followers</th>
-               <th>Ação</th>
+               <tr>
+                  <th class="firstCollumn">Usuário</th>
+                  <th class="otherCollumns">Repositories</th>
+                  <th class="otherCollumns">Followers</th>
+                  <th class="otherCollumns">Ação</th>
+               </tr>
             </thead>
-            <tbody>
+            <tbody id="listFavorites">
                <tr>
-                  <td class="user">
+                  <td class="user firstCollumn">
                      <img src="https://github.com/maykbrito.png" alt="Imagem de Mayk">
                      <a href="https://github.com/maykbrito">
                         <p>Mayk Brito</p>
                         <span>/maykbrito</span>
                      </a>
                   </td>
-                  <td class="repositories">
+                  <td class="repositories otherCollumns">
                      123
                   </td>
-                  <td class="followers">
+                  <td class="followers otherCollumns">
                      1234
                   </td>
-                  <td>
+                  <td class="otherCollumns">
                      <button class="remove">Remover</button>
                   </td>
                </tr>
 
                <tr>
-                  <td class="user">
+                  <td class="user firstCollumn">
                      <img src="https://github.com/diego3g.png" alt="Imagem de Mayk">
                      <a href="https://github.com/maykbrito">
                         <p>Diego Fernandes</p>
                         <span>/diego3g</span>
                      </a>
                   </td>
-                  <td class="repositories">
+                  <td class="repositories otherCollumns">
                      125
                   </td>
-                  <td class="followers">
+                  <td class="followers otherCollumns">
                      1230
                   </td>
-                  <td>
-                     <button class="remove">Remover</button>
-                  </td>
-               </tr>
-
-               <tr>
-                  <td class="user">
-                     <img src="https://github.com/maykbrito.png" alt="Imagem de Mayk">
-                     <a href="https://github.com/maykbrito">
-                        <p>Mayk Brito</p>
-                        <span>/maykbrito</span>
-                     </a>
-                  </td>
-                  <td class="repositories">
-                     123
-                  </td>
-                  <td class="followers">
-                     1234
-                  </td>
-                  <td>
-                     <button class="remove">Remover</button>
-                  </td>
-               </tr>
-
-               <tr>
-                  <td class="user">
-                     <img src="https://github.com/diego3g.png" alt="Imagem de Mayk">
-                     <a href="https://github.com/maykbrito">
-                        <p>Diego Fernandes</p>
-                        <span>/diego3g</span>
-                     </a>
-                  </td>
-                  <td class="repositories">
-                     125
-                  </td>
-                  <td class="followers">
-                     1230
-                  </td>
-                  <td>
-                     <button class="remove">Remover</button>
-                  </td>
-               </tr>
-
-               <tr>
-                  <td class="user">
-                     <img src="https://github.com/maykbrito.png" alt="Imagem de Mayk">
-                     <a href="https://github.com/maykbrito">
-                        <p>Mayk Brito</p>
-                        <span>/maykbrito</span>
-                     </a>
-                  </td>
-                  <td class="repositories">
-                     123
-                  </td>
-                  <td class="followers">
-                     1234
-                  </td>
-                  <td>
-                     <button class="remove">Remover</button>
-                  </td>
-               </tr>
-
-               <tr>
-                  <td class="user">
-                     <img src="https://github.com/maykbrito.png" alt="Imagem de Mayk">
-                     <a href="https://github.com/maykbrito">
-                        <p>Mayk Brito</p>
-                        <span>/maykbrito</span>
-                     </a>
-                  </td>
-                  <td class="repositories">
-                     123
-                  </td>
-                  <td class="followers">
-                     1234
-                  </td>
-                  <td>
-                     <button class="remove">Remover</button>
-                  </td>
-               </tr>
-
-               <tr>
-                  <td class="user">
-                     <img src="https://github.com/diego3g.png" alt="Imagem de Mayk">
-                     <a href="https://github.com/maykbrito">
-                        <p>Diego Fernandes</p>
-                        <span>/diego3g</span>
-                     </a>
-                  </td>
-                  <td class="repositories">
-                     125
-                  </td>
-                  <td class="followers">
-                     1230
-                  </td>
-                  <td>
+                  <td class="otherCollumns">
                      <button class="remove">Remover</button>
                   </td>
                </tr>
             </tbody>
+            <!-- <tbody id="emptyList">
+               <tr>
+                  <td>
+                     <img src="./assets/starTable.svg" alt="Estrela">
+                     <h1>Nenhum favorito ainda</h1>
+                  </td>
+               </tr>
+            </tbody> -->
          </table>
       </section>
    </main>
