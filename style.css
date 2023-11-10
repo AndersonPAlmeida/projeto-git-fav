@@ -93,7 +93,7 @@ header {
 
 table {
    width: 100%;
-   min-height: 30rem;
+   min-height: 42rem;
    max-height: 42rem;
    background-color: var(--bg-table);
    text-align: left;
@@ -132,27 +132,25 @@ table thead th:last-child {
    border-top-right-radius: 1rem;
 }
 thead,
-#listFavorites tr {
+.listFavorites tr {
   table-layout: fixed;
   width: 100%;
   display: table;
 }
-#listFavorites {
+.listFavorites {
    display: block;
    height: calc(42rem - 6.2rem);
    overflow: overlay;
 }
-#listFavorites::-webkit-scrollbar {
+.listFavorites::-webkit-scrollbar {
    width: .6rem;
 }
-#listFavorites::-webkit-scrollbar-track {
+.listFavorites::-webkit-scrollbar-track {
    background: transparent;
 }
- 
-#listFavorites::-webkit-scrollbar-thumb {
+.listFavorites::-webkit-scrollbar-thumb {
    background: #4A808C;
    border-radius: 10px;
-
 }
 td.user {
    display: flex;
@@ -172,33 +170,40 @@ td .remove {
    color: var(--color-tt-button);
    cursor: pointer;
 }
-#listFavorites tr:nth-child(even) {
+.listFavorites tr:nth-child(even) {
    background-color: var(--bg-table-two);
    border-top: 1px solid var(--color-border-table);
    border-bottom: 1px solid var(--color-border-table);
 
 }
-#listFavorites tr:last-child {
+.listFavorites tr:last-child {
    border-bottom-left-radius: 1rem;
    border-bottom-right-radius: 1rem;
 }
-#listFavorites tr:hover {
+.listFavorites tr:hover {
    box-shadow: inset 0 0 5px 1px #ADD8E6;
 }
 
-#emptyList tr, #emptyList td {
+.emptyList tr, .emptyList td {
    width: 100%;
    height: 100%;
 }
-#emptyList td {
+.emptyList td {
    display: flex;
    align-items: center;
    gap: 6rem;
    justify-content: center;
 }
-#emptyList td h1 {
+.emptyList td h1 {
    font-size: 4rem;   
    font-weight: 700;
    line-height: 2.5rem;
    color: var(--color-tt-title-empty);
+}
+
+@media (max-width: 940px) {
+   td.user {
+      flex-direction: column;
+      align-items:  flex-start;
+   }
 }
